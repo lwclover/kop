@@ -162,8 +162,8 @@ public class KafkaResponseUtils {
                             pair.getLeft(), // error
                             0L, // timestamp
                             Optional.ofNullable(
-                                    pair.getRight() != null ? pair.getRight().intValue() : null)
-                                    .orElse(0) // offset
+                                    pair.getRight() != null ? pair.getRight().longValue() : null)
+                                    .orElse(0L) // offset
                             , Optional.empty()
                     )
             ));
